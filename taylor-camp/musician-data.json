@@ -1,0 +1,20 @@
+[
+  {
+    "id": "slash",
+    "name": "Slash Jackson",
+    "instrument": "GUITAR",
+    "boat": "schooner"
+  },
+  {
+    "id": "jenn",
+    "name": "Jenn Sledge",
+    "instrument": "BASS",
+    "boat": "financial-error"
+  },
+  {
+    "id": "joni",
+    "name": "Joni Wich",
+    "instrument": "PIANO",
+    "boat": "financial-error"
+  }
+]

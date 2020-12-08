@@ -1,0 +1,23 @@
+[
+  {
+    "id": "cheese",
+    "name": "Cheeseburger in Paradise",
+    "topSpeed": 70,
+    "length": 50,
+    "passengers": []
+  },
+  {
+    "id": "financial-error",
+    "name": "Financial Error",
+    "topSpeed": 30,
+    "length": 90,
+    "passengers": ["joni", "jenn"]
+  },
+  {
+    "id": "schooner",
+    "name": "Schooner or Later",
+    "topSpeed": 30,
+    "length": 90,
+    "passengers": ["slash"]
+  }
+]
