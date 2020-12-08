@@ -1,0 +1,25 @@
+{
+  "name": "acquisitions-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install": "cd taylor-camp; npm i; cd ../will-camp; npm i; cd ../gateway; npm i"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eveporcello/acquisitions-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eveporcello/acquisitions-api/issues"
+  },
+  "homepage": "https://github.com/eveporcello/acquisitions-api#readme",
+  "dependencies": {
+    "@apollo/gateway": "^0.21.4",
+    "apollo-server": "^2.19.0",
+    "graphql": "^15.4.0"
+  }
+}

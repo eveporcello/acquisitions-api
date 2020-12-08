@@ -1,1 +1,1 @@
-# acquisitions-api
+# Acquisitions API
