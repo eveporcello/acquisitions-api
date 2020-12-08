@@ -1,4 +1,5 @@
 const { ApolloServer, gql } = require("apollo-server");
+const musicians = require("./musician-data.json");
 
 const typeDefs = gql`
   type Musician {
@@ -20,9 +21,18 @@ const typeDefs = gql`
   }
 `;
 
+const resolvers = {
+  Query: {
+    allMusicians: () => musicians,
+    musicianById: (parent, { id }) =>
+      musicians.find((musician) => musician.id === id),
+    totalMusicians: () => musicians.length
+  }
+};
+
 const server = new ApolloServer({
   typeDefs,
-  mocks: true
+  resolvers
 });
 
 server.listen(4002).then(({ url }) => {
