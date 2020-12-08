@@ -2,17 +2,13 @@ const { ApolloServer, gql } = require("apollo-server");
 const {
   buildFederatedSchema
 } = require("@apollo/federation");
+const musicians = require("./musician-data.json");
 
 const typeDefs = gql`
-  type Musician @key(fields: "id") {
+  type Musician {
     id: ID!
     name: String!
     instrument: Instrument!
-  }
-
-  extend type Boat @key(fields: "id") {
-    id: ID! @external
-    passengers: [Musician!]!
   }
 
   enum Instrument {
@@ -29,11 +25,20 @@ const typeDefs = gql`
   }
 `;
 
+const resolvers = {
+  Query: {
+    allMusicians: () => musicians,
+    musicianById: (parent, { id }) =>
+      musicians.find((musician) => musician.id === id),
+    totalMusicians: () => musicians.length
+  }
+};
+
 const server = new ApolloServer({
   schema: buildFederatedSchema([
     {
       typeDefs,
-      mocks: true
+      resolvers
     }
   ])
 });
